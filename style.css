@@ -1,0 +1,139 @@
+body {
+    height: 640px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(135deg, #ffcee9 0, #ffcede 3.85%, #ffcfd3 7.69%, #ffd0c9 11.54%, #ffd3bf 15.38%, #ffd5b6 19.23%, #ffd9ae 23.08%, #ffdca7 26.92%, #ffe0a2 30.77%, #ffe49e 34.62%, #ffe79b 38.46%, #ffeb9a 42.31%, #fdef9b 46.15%, #f2f29d 50%, #e6f5a1 53.85%, #daf8a6 57.69%, #cdfbad 61.54%, #c1fdb5 65.38%, #b3ffbe 69.23%, #a6ffc8 73.08%, #99ffd2 76.92%, #8cffdd 80.77%, #7fffe9 84.62%, #73fff4 88.46%, #68ffff 92.31%, #60ffff 96.15%, #5bffff 100%);
+    background-repeat: no-repeat;
+}
+
+/* Estilos información visual del juego */
+#game-info {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    width: 20%;
+    margin: 300px auto 15px auto;
+}
+
+#click-counter {
+    font-size: 16px;
+    color: #000000;
+}
+
+#restart-button {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+
+}
+
+#restart-button:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+#restart-button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+#restart-button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+#timer-counter {
+    font-size: 16px;
+    color: #000000;
+}
+
+#restart-button:hover {
+    background-color: #4169e1;
+}
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+/* Estilos del Juego */
+.grid-row {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #ecf0f1;
+    background-color: #462258;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell.clicked {
+    background-color: #3498db;
+}
+
+/* Mensaje de partida finalizada */
+#congratulation-message {
+    display: none;
+
+    width: 20%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 40%;
+
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+
+    background-color: #6a5acd;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+
+    text-align: center;
+    color: white;
+    background-color: #000000;
+}
